@@ -11,6 +11,7 @@ Source0:	http://khartiya.googlecode.com/files/%{pkgname}-%{version}.tar.xz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 BuildRequires:	freetype-tools
+BuildRequires:	dos2unix
 
 %description
 These fonts are based on Bitstream Charter font which was released by Bitstream
@@ -18,7 +19,7 @@ for X Window System. They are extended by addition of Cyrillic letters.
 
 %prep
 %setup -q -c -n %{pkgname}-%{version}
-dos2unix *.txt
+dos2unix OFL-FAQ.txt
 
 %build
 
