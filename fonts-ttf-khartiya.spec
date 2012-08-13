@@ -2,13 +2,12 @@
 
 Summary:	Extended Bitstream Charter font
 Name:		fonts-ttf-khartiya
-Version:	0.4
+Version:	1.0.1
 Release:	%mkrel 1
 License:	OFL
 Group:		System/Fonts/True type
 URL:		http://code.google.com/p/khartiya/
 Source0:	http://khartiya.googlecode.com/files/%{pkgname}-%{version}.tar.xz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 BuildRequires:	freetype-tools
 BuildRequires:	dos2unix
@@ -24,8 +23,6 @@ dos2unix OFL-FAQ.txt
 %build
 
 %install
-%__rm -rf %{buildroot}
-
 %__mkdir_p %{buildroot}%{_xfontdir}/TTF/khartiya
 
 %__install -m 644 *.ttf %{buildroot}%{_xfontdir}/TTF/khartiya
@@ -36,11 +33,8 @@ ttmkfdir %{buildroot}%{_xfontdir}/TTF/khartiya -o %{buildroot}%{_xfontdir}/TTF/k
 %__ln_s ../../..%{_xfontdir}/TTF/khartiya \
     %{buildroot}%_sysconfdir/X11/fontpath.d/ttf-khartiya:pri=50
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
+%defattr(644,root,root,755)
 %doc FontLog.txt OFL.txt OFL-FAQ.txt
 %dir %{_xfontdir}/TTF/khartiya
 %{_xfontdir}/TTF/khartiya/*.ttf
