@@ -41,3 +41,19 @@ ttmkfdir %{buildroot}%{_xfontdir}/TTF/khartiya -o %{buildroot}%{_xfontdir}/TTF/k
 %verify(not mtime) %{_datadir}/fonts/TTF/khartiya/fonts.dir
 %{_xfontdir}/TTF/khartiya/fonts.scale
 %{_sysconfdir}/X11/fontpath.d/ttf-khartiya:pri=50
+
+
+%changelog
+* Mon Aug 13 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.0.1-1mdv2012.0
++ Revision: 814518
+- update to 1.0.1
+
+* Fri Dec 09 2011 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.4-1
++ Revision: 739417
+- BR fixed
+- Update to 0.4
+
+* Fri Jul 22 2011 Sergey Zhemoitel <serg@mandriva.org> 0.2-1
++ Revision: 690983
+- imported package fonts-ttf-khartiya
+
