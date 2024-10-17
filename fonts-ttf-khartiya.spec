@@ -6,7 +6,7 @@ Version:	1.0.1
 Release:	2
 License:	OFL
 Group:		System/Fonts/True type
-URL:		http://code.google.com/p/khartiya/
+URL:		https://code.google.com/p/khartiya/
 Source0:	http://khartiya.googlecode.com/files/%{pkgname}-%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	freetype-tools
